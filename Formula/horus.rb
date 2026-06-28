@@ -1,30 +1,30 @@
 class Horus < Formula
   desc "Local-first, source-aware incident investigation engine"
   homepage "https://horus.sh"
-  version "0.8.20"
+  version "0.9.0"
   license "MIT"
 
   depends_on "node"
 
   on_macos do
     on_arm do
-      url "https://github.com/meritt-dev/horus/releases/download/v0.8.20/horus-v0.8.20-darwin-arm64.tar.gz"
-      sha256 "9a724cf1459bb996d941f23e7ca1e95c8e9c0730aaebdf9a13ff220811c2792e"
+      url "https://github.com/meritt-dev/horus/releases/download/v0.9.0/horus-v0.9.0-darwin-arm64.tar.gz"
+      sha256 "02d2fd4b14331586640c20cb7bd849da07fcc983cb8f0bf63a1627104d910d25"
     end
     on_intel do
-      url "https://github.com/meritt-dev/horus/releases/download/v0.8.20/horus-v0.8.20-darwin-x86_64.tar.gz"
-      sha256 "3580e65eaec1757a3bc641922f10d28f51c9dd30d64439c110cb44cab200ec37"
+      url "https://github.com/meritt-dev/horus/releases/download/v0.9.0/horus-v0.9.0-darwin-x86_64.tar.gz"
+      sha256 "8e9fa5d8ca4f680c27b5c7b9e98eb120b0336403bbfe048240f89903e2f0525a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/meritt-dev/horus/releases/download/v0.8.20/horus-v0.8.20-linux-arm64.tar.gz"
-      sha256 "c27530836e5df9f2e035a534a3ff62c636706b693d81a8bfde413a3166a90df4"
+      url "https://github.com/meritt-dev/horus/releases/download/v0.9.0/horus-v0.9.0-linux-arm64.tar.gz"
+      sha256 "1939b486d0b0437aa7cfe0fdab38c5a328d0c32215a6e0f2667de016f9484001"
     end
     on_intel do
-      url "https://github.com/meritt-dev/horus/releases/download/v0.8.20/horus-v0.8.20-linux-x86_64.tar.gz"
-      sha256 "3cd2f1042924a0d89cc066ca1da7801c703dd555f3d633f283cbec675169bce2"
+      url "https://github.com/meritt-dev/horus/releases/download/v0.9.0/horus-v0.9.0-linux-x86_64.tar.gz"
+      sha256 "316097409ce35a23d579d93a11119c566d28957f74481198bbd48fd6fc99fb68"
     end
   end
 
