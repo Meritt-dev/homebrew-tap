@@ -34,33 +34,10 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@main
 
-      - name: Download release archives for local testing
+      - name: Install published formula
         run: |
-          set -euo pipefail
-          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(%r{/releases/download/v([^/]+)/})[1]")
-          mkdir -p .homebrew-archives
-          for platform in darwin-arm64 darwin-x86_64 linux-arm64 linux-x86_64; do
-            curl -fsSL \
-              "https://github.com/meritt-dev/horus/releases/download/v${VERSION}/horus-v${VERSION}-${platform}.tar.gz" \
-              -o ".homebrew-archives/horus-v${VERSION}-${platform}.tar.gz"
-          done
-
-      - name: Create temporary test tap with local archives
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/horus-test-tap/Formula
-          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(%r{/releases/download/v([^/]+)/})[1]")
-          sed "s|https://github.com/meritt-dev/horus/releases/download/v${VERSION}/|file://$(pwd)/.homebrew-archives/|g" \
-            Formula/horus.rb > /tmp/horus-test-tap/Formula/horus.rb
-          cd /tmp/horus-test-tap
-          git init -q
-          git add .
-          git commit -q -m "ci test tap"
-
-      - name: Install formula from local tap
-        run: |
-          brew tap horus-local/test /tmp/horus-test-tap
-          brew install --build-from-source horus-local/test/horus
+          brew tap horus-ci/tap "$PWD"
+          brew install --build-from-source horus-ci/tap/horus
 
       - name: Test formula
-        run: brew test horus-local/test/horus
+        run: brew test horus-ci/tap/horus
