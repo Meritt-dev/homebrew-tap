@@ -37,7 +37,7 @@ jobs:
       - name: Download release archives for local testing
         run: |
           set -euo pipefail
-          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(/version \"([^\"]+)\"/)[1]")
+          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(%r{/releases/download/v([^/]+)/})[1]")
           mkdir -p .homebrew-archives
           for platform in darwin-arm64 darwin-x86_64 linux-arm64 linux-x86_64; do
             curl -fsSL \
@@ -49,7 +49,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p /tmp/horus-test-tap/Formula
-          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(/version \"([^\"]+)\"/)[1]")
+          VERSION=$(ruby -e "puts File.read('Formula/horus.rb').match(%r{/releases/download/v([^/]+)/})[1]")
           sed "s|https://github.com/meritt-dev/horus/releases/download/v${VERSION}/|file://$(pwd)/.homebrew-archives/|g" \
             Formula/horus.rb > /tmp/horus-test-tap/Formula/horus.rb
           cd /tmp/horus-test-tap

@@ -1,7 +1,6 @@
 class Horus < Formula
   desc "Local-first, source-aware incident investigation engine"
   homepage "https://horus.sh"
-  version "0.23.0"
   license "MIT"
 
   depends_on "node"
