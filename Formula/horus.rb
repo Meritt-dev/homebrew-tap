@@ -1,25 +1,25 @@
 class Horus < Formula
   desc "Local-first, source-aware production-incident investigation engine"
   homepage "https://horus.sh"
-  version "0.24.0"
+  version "0.24.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.0/horus-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "e559302348485aec6fa6b721d13975575daf1d5be541244e8011585ed97832e0"
+      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.1/horus-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "3131769f230867c4f30c241d6b383ccdb01d6eaea6c85f7107df5bfa903be0fb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.0/horus-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "f1053d10ae3d1e02d08834cd9671b32240554b1d8a643f0a1fcd8ea139714209"
+      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.1/horus-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "851b125c6f32d183e8d5b5b8b30dcf70f93553e49bbdf339b1b9e111e7a39da3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.0/horus-cli-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "b2298741c83a581a6883616e7f43483c6d6e78ae1b722f9c3febb28348895e34"
+      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.1/horus-cli-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "e268fbd21e8bafa0d3103387a8e3b0f6f1b468e14ad8a58462b0f64ac92dda69"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.0/horus-cli-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6f9e6b2818998930c9577c24f134144861c5461f756bbc28219a5c683b3e3ad5"
+      url "https://github.com/Meritt-dev/horus-rust/releases/download/v0.24.1/horus-cli-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "920f2fd8d98efe935adb4f99a33c2c32306d45c80f0162b5d4c4d5ebed6a55ee"
     end
   end
   license "MIT"
