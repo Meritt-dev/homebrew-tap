@@ -1,25 +1,25 @@
 class Horus < Formula
   desc "Local-first, source-aware production-incident investigation engine"
   homepage "https://horus.sh"
-  version "0.24.5"
+  version "0.24.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.5/horus-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "819b9bbc57f77b4c50ca7a214a5d2eb3d1073e15dc4e90e4b2a8a9881296e2f5"
+      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.6/horus-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "021e8cc571e1fd3b1d527c92b8972889ed4127e528438429493f862948855150"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.5/horus-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "8641d802eb596676b75b05012d3f306a7f8dd8b11e3bdeb3298f49ee66118ed3"
+      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.6/horus-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "5b70d8017f67868068b13e555322b33ae280811f80a15c6e79098db096ff287c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.5/horus-cli-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "94bb5eb815570f7ac15bc7b758d48633694c49f00db3b1fa2aed4c0d7a23b10f"
+      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.6/horus-cli-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "b8aad7cccded3cdbe8fa66eb936c0ae072bdb6050b533981a371a98f88fbb3da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.5/horus-cli-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "db6dcb40334f3b5f9591923ebea4c0865bcf146509010d4cb0807918039d46c0"
+      url "https://github.com/Meritt-dev/horus/releases/download/v0.24.6/horus-cli-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f45465928945cf5f37d43c82329cf78866b7f662f0cdee49d3fa66771ab88dbf"
     end
   end
   license "MIT"
